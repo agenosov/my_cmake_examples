@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TARGETDIR">		    
+            <Merge Id="VCRedist" DiskId="1" Language="0"
+                   SourceFile="$(env.ProgramFiles)\Common Files\Merge Modules\Microsoft_@VC_TOOLSET@_CRT_@CMAKE_VS_PLATFORM_NAME@.msm"/>
+        </DirectoryRef>
+        <Feature Id="VCRedist" Title="Visual C++ Runtime libraries" Display="hidden" Level="1">
+		    <MergeRef Id="VCRedist"/>
+        </Feature>		
+    </Fragment>
+</Wix>

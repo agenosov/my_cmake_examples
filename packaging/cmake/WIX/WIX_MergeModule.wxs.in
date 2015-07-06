@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">    
+    <Module Id="${PROJECT_NAME}" Language="1033" Version="${MERGE_MODULE_VERSION}">
+		<Package Id="{2E1FD34C-65F7-4F11-8070-501B88B69D8F}" 
+                 Manufacturer="${CPACK_PACKAGE_VENDOR}" Description="${CPACK_PACKAGE_DESCRIPTION_SUMMARY}"
+                 InstallerVersion="200" ReadOnly="yes"/>
+
+        <Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="Product" Name="MyProduct">
+                <Directory Id="ProductComponent" Name="${PROJECT_NAME}">            
+                    
+                    <Component Guid="{38124689-24CE-4B37-A13C-9A233C3896D4}">
+                        <File Source="${PROJECT_SOURCE_DIR}/README.md" KeyPath="yes"/>
+                    </Component>
+                </Directory>   
+			</Directory>
+		</Directory>
+        
+	</Module>
+</Wix>
