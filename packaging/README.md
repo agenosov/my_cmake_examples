@@ -3,7 +3,10 @@ Example of using CMake in conjunction with CPack to produce packages for:
 * Windows (.msi package, merge modules for .msi)
 
 ## Usage on Linux
-...
+* mkdir build && cd build && cmake .. && make
+
+### Packaging for Debian
+* cpack -G DEB
 
 ## Usage on Windows
 * mkdir build && cd build

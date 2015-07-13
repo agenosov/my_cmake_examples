@@ -28,6 +28,8 @@ if(WIN32)
     
     # build MSI Merge Module
     build_msm_module(${PROJECT_SOURCE_DIR}/cmake/WIX)
+elseif(UNIX AND NOT APPLE AND NOT CYGWIN)
+    include(RpmDebPackageSettings)
 endif()
 
 include(CPack)
